@@ -1,0 +1,402 @@
+<html>
+<head>
+    <title>SITEMAP</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+		
+    <style>
+        #textanimation {
+    display: block;
+    font: 10.5em 'Montserrat';
+    width: 960px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+    stroke-width: 15px;
+	stroke: rgb(255, 255, 255);
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+    stroke-width: 15px;
+	stroke: rgb(255, 255, 255);
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+    stroke-width: 15px;
+	stroke: rgb(251, 251, 251);
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+    stroke-width: 15px;
+	stroke: rgb(253, 253, 255);
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+    stroke-width: 15px;
+	stroke: rgb(243, 243, 243);
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
+        body {
+    background-color: black;
+  font-family: Candara;
+  margin: 0;
+}
+        svg{position: center}
+#sitemap{
+	width:100%;
+	height:1400px;
+    padding: 10px;
+    background-image: url("sitemap2.jpg");
+  
+  margin: 100px 100px 0px 100px;
+    
+    
+
+    
+}/*filter to give keys realistic look on hover*/
+        rect:hover,rect:focus{
+            filter: invert(90%) sepia(91%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+            fill: #fce57e;
+        }
+/*header css*/
+        #sky {
+  background-color:red;
+  height:500;
+  background-image:url("images/header1111.jpg");
+  background-position: 15% 45%;
+  background-attachment:fixed;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+    flex-direction:column;}
+  .overlayerr {
+    background-color: rgba(0,0,0,0.5);
+      height:500;
+    top:0;bottom:50;left:0;right:0;
+    
+    width:100%;
+    display:flex;
+     text-align: bottom;
+    align-items:bottom;
+    
+      justify-content:center;
+     
+  }
+        h1 {
+  text-align: bottom;
+margin-bottom: 10;
+  font-family: 'verdana', 'Helvetica', sans-serif;
+  font-size: 90px;
+        color:white;
+        }
+        .arrow{color:red}
+       
+        </style>
+    <meta charset="ISO-8859-1" />
+<title>Example of How to Play a Sound on Click or on MouseOver</title>
+<script language="javascript" type="text/javascript">
+function playSound(soundfile) {
+  document.getElementById("dummy").innerHTML=
+    "<embed src=\""+soundfile+"\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
+}
+function changecol(){
+    document.getElementById("one").style.color = "blue";
+}
+    /* JS for the navigation bar */
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+				if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+					document.getElementById("divnav").style.padding = "9px 9px 9px 53px";
+					document.getElementById("logodiv").style.width = "50px";
+					document.getElementById("logodiv").style.height = "50px";
+					document.getElementById("logodiv").style.padding = "13px";
+					} else {
+					document.getElementById("divnav").style.padding = "26px";
+					document.getElementById("logodiv").style.width = "100px";
+					document.getElementById("logodiv").style.height = "100px";
+					document.getElementById("logodiv").style.padding = "5px 0px 0px 0px";
+					}
+				}
+</script></head>
+<body>
+    <a name="top"></a>
+		<div>
+			<nav id="navigation">
+			<div id='logodiv'><img id='logo' src="images/logo.png"></div>
+			<div id="divnav">
+			<ul>
+				<li><a href="main.html" class="navlinks">Home</a></li>
+				<li><a href="shop.html" class="navlinks">Shop</a></li>
+				<li><a href="quiz.html" class="navlinks">Quiz</a></li>
+				<li><a href="gallery.html" class="navlinks">Gallery</a></li>
+				<li><a href="explore.html" class="navlinks">Explore</a></li>
+				<li><a href="student.html" class="navlinks">Creators</a></li>
+				<li><a href="form.html" class="navlinks">Feedback</a></li>
+				<li><a href="sitemap.html" class="navlinks">Sitemap</a></li>
+			</ul>
+			</div>
+		</nav>
+		</div>
+   <div id="sky">
+   <!-- feature overlay -->
+   <div class="overlayerr">
+       <br>
+    <svg id="textanimation" viewBox="0 0 1160 300">
+      <symbol id="s-text">
+          <text text-anchor="middle" x="50%" y="80%">S I T E  M A P</text>
+      </symbol>
+  
+      <g class = "g-ants">
+          <use xlink:href="#s-text" class="text-copy"></use>
+          <use xlink:href="#s-text" class="text-copy"></use>
+          <use xlink:href="#s-text" class="text-copy"></use>
+          <use xlink:href="#s-text" class="text-copy"></use>
+          <use xlink:href="#s-text" class="text-copy"></use>
+      </g>
+  </svg>
+       
+       
+   </div>
+</div>   
+    
+    
+    
+    
+    <div id="sitemap" >
+    <svg width="1200" height="1400">
+        <defs>
+    <filter id="f2" x="0" y="0" width="200%" height="200%">
+      <feOffset result="offOut" in="SourceGraphic" dx="5" dy="5" />
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="60" />
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+    </filter>
+  </defs>    
+         <defs>
+    <filter id="f1" x="0" y="0" width="200%" height="200%">
+      <feOffset result="offOut" in="SourceGraphic" dx="10" dy="10" />
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+    </filter>
+  </defs>    
+<defs>
+    <filter id="f3" x="0" y="0" width="200%" height="200%">
+      <feOffset result="offOut" in="SourceGraphic" dx="10" dy="" />
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+    </filter>
+  </defs>    
+         <!__ start of keyboard __>
+        <rect x=30 y=50 width="1120" height="550" style="fill:rgb(0,0,0);stroke-width:6;stroke:grey" filter="url(#f2)"/>
+        
+        <rect x=450 y=80 width="300" height="100" style="fill:rgb(255,255,255);stroke-width:8;stroke:#FF00B7" filter="url(#f2)" />
+         <text fill="#000000" font-size="40" font-family="Arial" x="490" y="140">HOME</text>
+        
+        <a href="#" onmouseover="changecol();">
+        <rect id="one" x=40 y=240 width="100" height="320" style="fill:rgb(255,240,240);stroke-width:3;stroke:grey" filter="url(#f2)"/>
+        </a>
+        
+        <a href="form.html">
+        <rect x=140 y=240 width="100" height="320" style="fill:rgb(255,240,240);stroke-width:6;stroke:grey" filter="url(#f2)"/>
+        
+        </a>
+        
+        <a href="main.html" >
+        <rect x=240 y=240 width="100" height="320" style="fill:rgb(255,255,255);stroke-width:6;stroke:grey" filter="url(#f2)"/>
+         <text fill=black font-size="35" font-family="Verdana" x="295" y="510" transform="rotate(-90, 295, 510)">HOME</text>    
+        </a>
+        
+        
+        <a href="shop.html" >
+        <rect x=340 y=240 width="100" height="320" style="fill:rgb(255,255,255);stroke-width:6;stroke:grey" filter="url(#f2)"/>
+         <text fill=black font-size="35" font-family="Verdana" x="395" y="510" transform="rotate(-90, 395, 510)">SHOP</text>   
+        </a>
+        
+        
+        
+        <a href="quiz.html" >
+        <rect x=440 y=240 width="100" height="320" style="fill:rgb(255,255,255);stroke-width:6;stroke:grey" filter="url(#f2)"/>
+         <text fill=black font-size="35" font-family="Verdana" x="495" y="510" transform="rotate(-90, 495, 510)" onmouseover="playSound('PRETTYMUCH - Eyes Off You (Audio).mp3');">QUIZ</text>  
+        </a>
+        
+        <a href="gallery.html">
+        <rect x=540 y=240 width="100" height="320" style="fill:rgb(255,255,255);stroke-width:6;stroke:grey" filter="url(#f2)"/>
+         <text fill=black font-size="35" font-family="Verdana" x="595" y="510" transform="rotate(-90, 595, 510)">GALLERY</text> 
+        </a>
+        
+        <a href="explore.html">
+        <rect x=640 y=240 width="100" height="320" style="fill:rgb(255,255,255);stroke-width:6;stroke:grey" filter="url(#f2)"/>
+         <text fill=black font-size="35" font-family="Verdana" x="595" y="610" transform="rotate(-90, 595, 510)">EXPLORE</text>     
+        </a>
+        
+        <a href="student.html">
+        <rect x=740 y=240 width="100" height="320" style="fill:rgb(255,255,255);stroke-width:6;stroke:grey" filter="url(#f2)"/>
+         <text fill=black font-size="35" font-family="Verdana" x="595" y="710" transform="rotate(-90, 595, 510)">CREATORS</text>  
+        </a>
+        
+        
+        <a href="form.html">
+        <rect x=840 y=240 width="100" height="320" style="fill:rgb(255,255,255);stroke-width:6;stroke:grey" filter="url(#f2)"/>
+         <text fill=black font-size="35" font-family="Verdana" x="595" y="810" transform="rotate(-90, 595, 510)">FEEDBACK</text> 
+        </a>
+        
+        
+        
+        <rect x=940 y=240 width="100" height="320" style="fill:rgb(255,240,240);stroke-width:6;stroke:grey" filter="url(#f2)"/>
+        <rect x=1040 y=240 width="100" height="320" style="fill:rgb(255,240,240);stroke-width:6;stroke:grey" filter="url(#f2)"/>
+        
+        <rect x=120 y=240 width="40" height="150" style="fill:rgb(0,0,0);stroke-width:6;stroke:grey" filter="url(#f2)"/>
+        <rect x=220 y=240 width="40" height="150" style="fill:rgb(0,0,0);stroke-width:6;stroke:grey" filter="url(#f2)"/>
+        <rect x=420 y=240 width="40" height="150" style="fill:rgb(0,0,0);stroke-width:6;stroke:grey" filter="url(#f2)"/>
+        <rect x=520 y=240 width="40" height="150" style="fill:rgb(0,0,0);stroke-width:6;stroke:grey" filter="url(#f2)"/>
+        <rect x=620 y=240 width="40" height="150" style="fill:rgb(0,0,0);stroke-width:6;stroke:grey" filter="url(#f2)"/>
+        <rect x=820 y=240 width="40" height="150" style="fill:rgb(0,0,0);stroke-width:6;stroke:grey" filter="url(#f2)"/>
+        <rect x=920 y=240 width="40" height="150" style="fill:rgb(0,0,0);stroke-width:6;stroke:grey" filter="url(#f2)"/>
+        <rect x=1120 y=240 width="20" height="150" style="fill:rgb(0,0,0);stroke-width:6;stroke:grey" filter="url(#f2)"/>
+       
+        
+        
+        <rect x=100 y=100 width="20" height="20" style="fill:#39379E;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+         <rect x=150 y=100 width="20" height="20" style="fill:#39379E;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+         <rect x=200 y=100 width="20" height="20" style="fill:#39379E;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+         <rect x=250 y=100 width="20" height="20" style="fill:#39379E;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+        <rect x=100 y=150 width="20" height="20" style="fill:#FF00B7;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+         <rect x=150 y=150 width="20" height="20" style="fill:#FF00B7;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+         <rect x=200 y=150 width="20" height="20" style="fill:#FF00B7;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+         <rect x=250 y=150 width="20" height="20" style="fill:#FF00B7;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+        
+        <rect x=300 y=110 width="60" height="10" style="fill:#FF00B7;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+        
+         <rect x=300 y=140 width="60" height="10" style="fill:grey;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+         <rect x=300 y=170 width="60" height="10" style="fill:#FF00B7;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+        <a href="#" onclick="playSound('PRETTYMUCH - Eyes Off You (Audio).mp3');">
+        <circle cx=400 cy=110 r=20  style="fill:#CCC4FA;stroke-width:1;stroke:grey" filter="url(#f1)"/>
+        <circle cx=400 cy=160 r=20  style="fill:#39379E;stroke-width:1;stroke:grey" filter="url(#f1)"/> </a>
+        
+         <circle cx=800 cy=110 r=20  style="fill:#39379E;stroke-width:1;stroke:grey" filter="url(#f1)"/>
+        <circle cx=850 cy=110 r=20  style="fill:#FF00B7;stroke-width:1;stroke:grey" filter="url(#f1)"/>
+        <circle cx=900 cy=110 r=20  style="fill:#CCC4FA;stroke-width:1;stroke:grey" filter="url(#f1)"/>
+        <rect x=800 y=140 width="100" height="10" style="fill:grey;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+         <rect x=800 y=170 width="100" height="10" style="fill:#FF00B7;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+        
+        <rect x=950 y=100 width="20" height="20" style="fill:#39379E;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+         <rect x=1000 y=100 width="20" height="20" style="fill:#39379E;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+         <rect x=1050 y=100 width="20" height="20" style="fill:#39379E;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+        
+        <rect x=950 y=150 width="20" height="20" style="fill:#FF00B7;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+         <rect x=1000 y=150 width="20" height="20" style="fill:grey;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+         <rect x=1050 y=150 width="20" height="20" style="fill:#CCC4FA;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+        
+        <text fill=white font-size="35" font-family="Verdana" x="70" y="90" >YAMAHA</text>
+        <text fill=white font-size="35" font-family="Verdana" x="900" y="90" >MOTIF XF7</text>
+        
+         <!__ end of keyboard __>
+        
+        
+        <line x1="300" y1="210" x2="900" y2="210" style="stroke:#FF00B7;stroke-width:6" />
+        
+        
+        
+        
+        <line x1="300" y1="210" x2="300" y2="240" style="stroke:#FF00B7;stroke-width:4" />
+        <line x1="400" y1="210" x2="400" y2="240" style="stroke:#FF00B7;stroke-width:4" />
+        <line x1="500" y1="210" x2="500" y2="240" style="stroke:#FF00B7;stroke-width:4" />
+        <line x1="600" y1="180" x2="600" y2="240" style="stroke:#FF00B7;stroke-width:6" />
+        <line x1="700" y1="210" x2="700" y2="240" style="stroke:#FF00B7;stroke-width:4" />
+        <line x1="800" y1="210" x2="800" y2="240" style="stroke:#FF00B7;stroke-width:4" />
+        <line x1="900" y1="210" x2="900" y2="240" style="stroke:#FF00B7;stroke-width:4" />
+        
+        
+         <!__ start of octopad __>
+        <rect x=350 y=800 width="660" height="500" style="fill:black;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+        <a href="newreleases.html">
+        <rect x=370 y=820 rx="20" ry="20" width="200" height="200" style="fill:#CCC4FA;stroke-width:3;stroke:grey" filter="url(#f3)"/>
+        <text fill=black  font-size="35" font-family="cardona" x="420" y="920" >NEW </text>
+         <text fill=black font-size="35" font-family="cardona" x="380" y="950" >RELEASES</text></a>
+        
+         <a href="genre.html">
+        <rect x=370 y=1060 rx="20" ry="20" width="200" height="200" style="fill:#FF00B7;stroke-width:3;stroke:yellow" filter="url(#f3)"/>
+         <text fill=black  font-size="35" font-family="cardona" x="420" y="1150" >GENRES</text>
+         </a>    
+             
+         <a href="events.html">    
+        <rect x=630 y=820 rx="20" ry="20" width="200" height="200" style="fill:grey;stroke-width:3;stroke:yellow" filter="url(#f3)"/>
+        <text fill=black  font-size="35" font-family="cardona" x="680" y="920" >EVENTS</text>
+        </a>    
+             
+             
+        <a href="musichistory.html">       
+        <rect x=630 y=1060 rx="20" ry="20" width="200" height="200" style="fill:#39379E;stroke-width:3;stroke:grey" filter="url(#f3)"/>
+        <text fill=black  font-size="35" font-family="cardona" x="680" y="1150" >MUSIC</text>
+         <text fill=black font-size="35" font-family="cardona" x="650" y="1180" >THROUGH </text>
+         <text fill=black font-size="35" font-family="cardona" x="680" y="1210" >TIME </text></a>      
+            
+        <text fill=white font-size="35" font-family="Verdana" x="870" y="860" >Roland</text> 
+        <circle cx=890 cy=900 r=20  style="fill:grey;stroke-width:2;stroke:white" filter="url(#f1)"/>
+        <circle cx=960 cy=900 r=20  style="fill:grey;stroke-width:2;stroke:white" filter="url(#f1)"/>
+        <text fill=white font-size="20" font-family="Verdana" x="890" y="940" >volume</text> 
+        
+        <rect x=870 y=960 width="20" height="20" style="fill:black;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+        <rect x=920 y=960 width="20" height="20" style="fill:black;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+        <rect x=970 y=960 width="20" height="20" style="fill:black;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+        
+         <rect x=870 y=1000 width="20" height="20" style="fill:black;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+        
+        <ellipse cx="930" cy="1010" rx="25" ry="20"
+  style="fill:#39379E;stroke:purple;stroke-width:2;stroke:grey" />
+        <rect x=970 y=1000 width="20" height="20" style="fill:black;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+        
+        
+        <rect x=870 y=1040 width="20" height="20" style="fill:black;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+        <rect x=920 y=1040 width="20" height="20" style="fill:black;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+        <rect x=970 y=1040 width="20" height="20" style="fill:black;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+        
+        
+        <rect x=870 y=1100 width="120" height="80" style="fill:#CCC4FA;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+        <text fill=white font-size="20" font-family="Verdana" x="870" y="1090" >OCTOPAD</text>
+        
+        <circle cx=880 cy=1210 r=15  style="fill:black;stroke-width:2;stroke:grey" filter="url(#f1)"/>
+        <circle cx=930 cy=1210 r=15  style="fill:black;stroke-width:2;stroke:grey" filter="url(#f1)"/>
+         <circle cx=980 cy=1210 r=15  style="fill:black;stroke-width:2;stroke:grey" filter="url(#f1)"/>
+        
+         <rect x=870 y=1240 width="20" height="20" style="fill:black;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+        <rect x=920 y=1240 width="20" height="20" style="fill:black;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+        <rect x=970 y=1240 width="20" height="20" style="fill:black;stroke-width:3;stroke:grey" filter="url(#f1)"/>
+        
+         
+        <line x1="600" y1="603" x2="600" y2="1170" style="stroke:#FF00B7;stroke-width:6" />
+        <line x1="570" y1="945" x2="630" y2="945" style="stroke:#FF00B7;stroke-width:6" />
+        
+       <line x1="570" y1="1170" x2="630" y2="1170" style="stroke:#FF00B7;stroke-width:6" />
+        
+         <!__ end of octopad __>
+       
+        
+    </svg></div>
+	<div class="arrow"><a href="#top"><div class="arrowpic"><img src="images/arrow.png" width="50px" height="50px"></div></a></div>
+	<hr>
+	<footer style="">
+	<a class="footerlink" href="himaya.html" >Page Editor</a>
+	</footer>
+	
+
+    </body></html>

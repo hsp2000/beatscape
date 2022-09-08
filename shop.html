@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>SHOP</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script>
+        /* JS for the navigation bar */
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+				if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+					document.getElementById("divnav").style.padding = "9px 9px 9px 53px";
+					document.getElementById("logodiv").style.width = "50px";
+					document.getElementById("logodiv").style.height = "50px";
+					document.getElementById("logodiv").style.padding = "13px";
+					} else {
+					document.getElementById("divnav").style.padding = "26px";
+					document.getElementById("logodiv").style.width = "100px";
+					document.getElementById("logodiv").style.height = "100px";
+					document.getElementById("logodiv").style.padding = "5px 0px 0px 0px";
+					}
+				};</script>
+		<style>
+            body{background-color:black}
+			 svg {
+    display: block;
+    font: 10.5em 'Montserrat';
+    width: 960px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+    stroke-width: 15px;
+	stroke: rgb(255, 255, 255);
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+    stroke-width: 15px;
+	stroke: rgb(255, 255, 255);
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+    stroke-width: 15px;
+	stroke: rgb(251, 251, 251);
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+    stroke-width: 15px;
+	stroke: rgb(253, 253, 255);
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+    stroke-width: 15px;
+	stroke: rgb(243, 243, 243);
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
+			
+			body{background-color: black;
+				 }				 
+
+			.product2{float : left; 
+					 background-color : white;  
+					 margin : 2% 2% 2% 2%;  
+					 width : 15%; 
+					 text-align:center; 
+					 color:black; 
+					 height:370px;
+					 font-family:"Georgia";
+					 font-size:15px;
+					 
+					 position:relative;}
+			
+
+
+			.note ( text-align: center; 
+					font-size: 20px; 
+					font-weight: bold;
+					color: #333; 
+					padding-top: 20px; 
+					height: 120px;
+					position: relative;
+				)
+				
+			.button {
+					  background-color: #4CAF50; /* Green */
+					  border: none;
+					  color: white;
+					  padding: 16px 32px;
+					  text-align: center;
+					  text-decoration: none;
+					  display: inline-block;
+					  font-size: 16px;
+					  margin: 4px 2px;
+					  transition-duration: 0.4s;
+					  cursor: pointer;
+					}
+
+			#header{font-family:"Gabriola";
+					font-size:70px;
+					text-align:center;
+					/* -webkit-text-stroke-width: 1px;
+					-webkit-text-stroke-color: grey;*/
+					color:white;}
+			  
+			.details{font-size:17px}
+			
+			.signup{position:relative;
+					top:45%;
+					left:50%;
+					width: 100px;
+					transform: translate(-50%,-50%);
+				}
+			
+			.signupbutton{background:white;
+						  padding:11px 16px;
+						  color:black;
+						  text-decoration:none;
+						  font-weight:bold;
+						  font-family:"Georgia";
+						  border-radius:10px;
+						  box-shadow:6px 6px 29px -4px;
+						  transition-duration:0.4s;
+						  font-size:10px;
+                
+			}
+			
+			.signupbutton:hover{background:#30303C;
+								color:white;
+			}
+			
+			.popup{background-color:rgba(0,0,0,0.6);
+				   width:100%;
+				   height:100%;
+				   position:absolute;
+				   top:0;
+				   justify-content:center;
+				   align-items:center;
+				   display:none;
+				   text-align:center;
+			}
+			
+			.popupcontent{height:270px;
+						  width:500px;
+						  background:white;
+						  padding:20px;
+						  border-radius: 5px;
+						  position:relative;
+			}
+			
+			.inp{margin:20px auto;
+				  display:block;
+				  width:50%;
+				  padding:8px;
+				  border:1px solid grey;}
+				  
+			.close{position:absolute;
+				   top:-1px;
+				   right:1px;
+				   width:22px;
+				   height:26px;
+				   cursor:pointer;}
+				   
+			.cart{padding:20px auto;
+				  background:white;
+				  color:black;
+				  width:80%;
+                margin-left: 10%;
+				  margin-top: 55%;
+				  text-align:center;
+			}
+            #sky {
+				  background-color:red;
+				  height:500px;
+				  background-image:url("images/header1111.jpg");
+				  background-position: 15% 45%;
+				  background-attachment:fixed;
+				  position:relative;
+				  display:flex;
+				  align-items:center;
+				  justify-content:center;
+				  flex-direction:column;
+				  }
+				  
+			.overlayerr {
+				  
+                height:500;
+				  top:0;bottom:50;left:0;right:0;
+				  width:100%;
+			      display:flex;
+				  text-align: bottom;
+				  align-items:bottom;
+				  justify-content:center;     
+				}
+			
+			h1 {
+				  text-align: bottom;
+				  margin-bottom: 10;
+				  font-family: 'verdana', 'Helvetica', sans-serif;
+				  font-size: 90px;
+				  color:white;
+				}
+				
+            h3{
+			  font-size: 30;
+              font-family: 'verdana', 'Helvetica', sans-serif;
+			  }
+			  
+			.titles{
+				font-family: 'verdana', 'Helvetica', sans-serif;
+				font-size:25px;
+			}
+			  .mainmain{height:1150px;width:100%}
+			  
+			.button {background-color: black;
+					 color:white;
+			}
+		</style>
+	</head>
+	<body  id="font-resizing">
+        <a name="top"></a>
+		<div>
+			<nav id="navigation">
+			<div id='logodiv'><img id='logo' src="images/logo.png"></div>
+			<div id="divnav">
+			<ul>
+				<li><a href="main.html" class="navlinks">Home</a></li>
+				<li><a href="shop.html" class="navlinks">Shop</a></li>
+				<li><a href="quiz.html" class="navlinks">Quiz</a></li>
+				<li><a href="gallery.html" class="navlinks">Gallery</a></li>
+				<li><a href="explore.html" class="navlinks">Explore</a></li>
+				<li><a href="student.html" class="navlinks">Creators</a></li>
+				<li><a href="form.html" class="navlinks">Feedback</a></li>
+				<li><a href="sitemap.html" class="navlinks">Sitemap</a></li>
+				<li><button class="button" type="button" id="decreaseFont" onclick="decreaseSize()">Decrease font size</button></li>
+                <li><button class="button" type="button" id="increaseFont" onclick="increaseSize()">Increase font size</button></li>
+			</ul>
+			</div>
+		</nav>
+		</div>
+		<div id="sky">
+   <!-- feature overlay -->
+   <div class="overlayerr">
+	<svg viewBox="0 0 1860 300">
+		<symbol id="s-text">
+			<text text-anchor="middle" x="50%" y="80%">P U R C H A S E  M U S I C</text>
+		</symbol>
+	
+		<g class = "g-ants">
+			<use xlink:href="#s-text" class="text-copy"></use>
+			<use xlink:href="#s-text" class="text-copy"></use>
+			<use xlink:href="#s-text" class="text-copy"></use>
+			<use xlink:href="#s-text" class="text-copy"></use>
+			<use xlink:href="#s-text" class="text-copy"></use>
+		</g>
+	</svg>
+       
+       
+   </div>
+</div>   <center>
+		<h3 style="color: white;" id="font-resizing">Reresent your favourite artist/band <br>
+			Log in and shop with us now</h3></center><br>
+			
+		<div class="mainmain">
+		<form class="shopform">	
+		<div class="signup"><a href="#" class="signupbutton" id="signupbutton">LOGIN</a></div>
+		
+		<div class="popup">
+			<div class="popupcontent">
+				<img src="images/user.png" alt="user" height="70px" width="70px">
+				<img class="close" src="images/close-button.png" alt="close" class="close">
+				<input class="inp" type="text" placeholder="username" name="custname" id="custname">
+				<input class="inp" type="password" placeholder="password" name="custpass" id="custpass"><br>
+			</div>
+		</div>
+		
+		<!--music starts from here-->
+		
+	
+		
+<div>
+        <div class='product2' id="mproduct1"> 
+			<img id='selenaimg' src="images/selena-gomez.jpg" height='70%' width='100%' alt='selena gomez original'> 
+				<div class='description'> 
+					<br>Selena Gomez Revival
+					<div class='price'> 
+					6.99$ 
+					</div>
+					<p>Add to cart<input type="checkbox" name="songs1" value="s1"><br>
+					Quantity
+					<select name="songquantity1">
+						<option value="1" select>01</option>
+						<option value="2">02</option>
+						<option value="3">03</option>
+					</select>
+					</p>
+				</div>
+			</div>
+			
+			<div class='product2' id="mproduct2">
+				<img id='brunoimg' src="images/brunomars.jfif" height='70%' width='100%' alt='Bruno mars orignal'> 
+				<div class='description'> 	
+					<br>Bruno Mars - Hooligans 	
+					<div class='price'> 
+					6.99$ 
+					</div>
+					<p>Add to Cart<input type="checkbox" name="songs2" value="s2"><br>
+					Quantity
+					<select name="songquantity2">
+						<option value="1" select>01</option>
+						<option value="2">02</option>
+						<option value="3">03</option>
+					</select>
+					</p>
+				</div>
+			</div>
+			
+			<div class='product2' id="mproduct3">
+				<img id='senoritaimg' src="images/senorita.jpg" height='70%' width='100%' alt='senorita camilia'> 
+				<div class='description'> 
+					<br>Senorita - Camilia Cabello	 
+					<div class='price'> 
+					6.99$ 
+					</div>
+					<p>Add to Cart<input type="checkbox" name="songs3" value="s3"><br>
+					Quantity
+					<select name="songquantity3">
+						<option value="1" select>01</option>
+						<option value="2">02</option>
+						<option value="3">03</option>
+					</select>
+					</p>
+				</div>
+			</div>
+				
+			<div class='product2' id="mproduct4">
+				<img id='edmultiplyimg' src="images/Edsheeranplushmv.png" height='70%' width='100%' alt='Multiply Ed Sheeran '> 
+				<div class='description'> 
+					<br>Multiply - Ed Sheeran
+					<div class='price'> 
+					19.99$ 
+					</div>
+					<p>Add to Cart<input type="checkbox" name="songs4" value="s4"><br>
+					Quantity
+					<select name="songquantity4">
+						<option value="1" select>01</option>
+						<option value="2">02</option>
+						<option value="3">03</option>
+					</select>
+					</p>
+				</div>
+			</div>
+				
+			<div class='product2' id="mproduct5">
+				<img id='taylorredimg' src="images/Taylor_Swift_-_Red.png" height='70%' width='100%' alt='Red taylor swift'>
+				<div class='description'> 
+					<br>Red - Taylor Swift
+					<div class='price'> 
+					6.99$ 
+					</div>
+					<p>Add to Cart<input type="checkbox" name="songs5" value="s5"><br>
+					Quantity
+					<select name="songquantity5">
+						<option value="1" select>01</option>
+						<option value="2">02</option>
+						<option value="3">03</option>
+					</select>
+					</p>
+				</div>
+			</div>
+				</div>
+			<div class='product2' id="mproduct6">
+				<img id='meghanimg' src="images/No_Excuses meghan.png" height='70%' width='100%' alt='No excuses meghan '> 
+				<div class='description'> 
+					<br>No Excuses - Meghan Trainor
+					<div class='price'>
+					14.99$ 
+					</div>
+					<p>Add to Cart<input type="checkbox" name="songs6" value="s6"><br>
+					Quantity
+					<select name="songquantity6">
+						<option value="1" select>01</option>
+						<option value="2">02</option>
+						<option value="3">03</option>
+					</select>
+					</p>
+				</div>
+				</div>
+				
+			<div class='product2' id="mproduct7">
+				<img id='21pilotsimg' src="images/21pilots.jpg" height='70%' width='100%' alt='Heathens 21 pilots'> 
+				<div class='description'> 
+					<br>Heathens - 21 Pilots 
+					<div class='price'> 
+					6.99$ 
+					</div>
+					<p>Add to Cart<input type="checkbox" name="songs7" value="s7"><br>
+					Quantity
+					<select name="songquantity7">
+						<option value="1" select>01</option>
+						<option value="2">02</option>
+						<option value="3">03</option>
+					</select>
+					</p>
+				</div>
+			</div>
+				
+			<div class='product2' id="mproduct8">
+				<img id='starselenaimg' src="images/Star_Dance_Deluxe.png" height='70%' width='100%' alt='Star dance selena'> 
+				<div class='description'> 
+					<br>Star Dance  - Selena Gomez
+					<div class='price'> 
+					29.99$ 
+					</div>
+					<p>Add to Cart<input type="checkbox" name="songs8" value="s8"><br>
+					Quantity
+					<select name="songquantity8">
+						<option value="1" select>01</option>
+						<option value="2">02</option>
+						<option value="3">03</option>
+					</select>
+					</p>
+				</div>
+			</div>
+				
+			<div class='product2' id="mproduct9">
+				<img id='purposeimg' src="images/Purpose.png" height='70%' width='100%' alt='Purpose JB'> 
+				<div class='description'>
+					<br>Purpose - Justin Bieber
+					<div class='price'> 
+					29.99$ 
+					</div>				
+					<p>Add to Cart<input type="checkbox" name="songs9" value="s9"><br>
+					Quantity
+					<select name="songquantity9">
+						<option value="1" select>01</option>
+						<option value="2">02</option>
+						<option value="3">03</option>
+					</select>
+					</p>
+				</div>
+			</div>
+				
+			<div class='product2' id="mproduct10">
+				<img id='wolveselenaimg' src="images/wolves.png" height='70%' width='100%' alt='Wolves selena'> 
+				<div class='description'> 
+					Wolves ft Mellow - Selena Gomez
+					<div class='price'> 
+					9.99$ 
+					</div>
+					<p>Add to Cart<input type="checkbox" name="songs10" value="s10"><br>
+					Quantity
+					<select name="songquantity10">
+						<option value="1" select>01</option>
+						<option value="2">02</option>
+						<option value="3">03</option>
+					</select>
+					</p>
+				</div>
+			</div>
+			<br>
+			<br><br><br><br>
+			<div class="cart">
+			<div class="products-selected" >
+				<p class="titles">ITEMS SELECTED</p>
+				<p id="products-selected">none</p>
+			</div>
+			<div class="price-selected">
+				<p class="titles">TOTAL</p>	
+				<p id="cart-total"> 0$</p>
+			</div>
+				<div class="product-cart">
+					<p><button type="button" class="btn" id="refreshcart">Refresh</button> 
+					<button type="button" class="btn" id="buyout" style="color: red;">Buyout</button></p>
+                </div>
+	
+		</div>
+		</form>
+		
+	</div>
+
+	<script type="text/javascript" language="javascript" src="myjscript.js"></script>
+	<div class="arrow"><a href="#top"><div class="arrowpic"><img src="images/arrow.png" width="50px" height="50px"></div></a></div>
+
+	<hr>
+		<footer>
+	<a href="diga.html" class="footerlink">Page Editor</a>
+</footer>
+	</body>
+</html>
